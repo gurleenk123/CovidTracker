@@ -38,6 +38,7 @@ export default class Countries extends Component {
     {
         return country
     }
+    return null;
 }).map((country)=>{
   return <tr>
                 <td>{country.Country}</td>
