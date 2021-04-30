@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Alert } from 'react-bootstrap';
-import {Row,Col} from 'react-bootstrap';
+
  export default class Summary extends Component {
    
     render() {
