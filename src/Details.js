@@ -3,7 +3,7 @@ import axios from 'axios';
 import Summary from './Summary'
 import Countries from './Countries'
 import logo from './covid.png';
-import {Navbar} from 'react-bootstrap';
+import {Container,Row,Col} from 'react-bootstrap';
 
 export default class Details extends Component {
     state={
@@ -41,22 +41,30 @@ export default class Details extends Component {
       
        
         return (
-            <div>
-            <Navbar >
-  <Navbar.Brand > <h1 style={{fontSize:'65px',fontFamily:' Brush Script Std,cursive'}}>C<span><img className="img" src={logo} alt="covid-img"/></span>VID-19 TRACKER</h1></Navbar.Brand>
-  <Navbar.Toggle />
+            
+            <Container>
+<Row >
 
-</Navbar>
+<h1 style={{fontSize:'65px',fontFamily:'  Comic Sans, cursive',color:'white',marginRight:'0px'}}>C<span><img className="img" src={logo} alt="covid-img"/></span>VID-19 TRACKER</h1>              
+            </Row>
+            
+            
+            <Row  >
         
+
+            <Col xs lg={3} >
+            <br/> <br/>
+             
             <Summary summary={this.state.global} currentDate={this.state.currentDate}/>
-            <br/>
+             </Col>
+
+              <Col md="auto">
+              <Countries countries={this.state.countries}/>
+              </Col>
+           
+            </Row>
           
-            <br/><br/>
-          <div className="container">
-           <Countries countries={this.state.countries}/>
-       
-           </div>
-            </div>
+            </Container>
         )
     }
 }

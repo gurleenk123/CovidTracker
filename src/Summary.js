@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-
-import {Card,CardDeck} from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
+import {Row,Col} from 'react-bootstrap';
  export default class Summary extends Component {
    
     render() {
@@ -10,82 +10,46 @@ import {Card,CardDeck} from 'react-bootstrap';
           <>
       
 
-      <h1>GLOBAL DATA</h1>
-      <h2 style={{color:'orangered'}}>Last Updated on {new Date (currentDate).toDateString()} </h2>
-    
-                <div className="row mt-xl-4" style={{margin:'0 auto'}}>
-                <CardDeck>
-                <Card style={{ width: '18rem',borderBottom:'6px solid maroon',background:'#E5F5FB'}}>
-  <Card.Body>
-    <Card.Title><h2>New Confirmed</h2></Card.Title>
-   
-    <Card.Text>
-    <h1>{summary.NewConfirmed}</h1>
-                   
-    </Card.Text>
-  
-  </Card.Body>
-</Card>
-
-
-            <Card style={{ width: '18rem',borderBottom:'6px solid orangered',background:'#E5F5FB'}}>
-  <Card.Body>
-    <Card.Title><h2>Total Confirmed</h2></Card.Title>
-   
-    <Card.Text>
-    <h1>{summary.TotalConfirmed}</h1>
-                    
-    </Card.Text>
-  
-  </Card.Body>
-</Card>
-
-<Card style={{ width: '18rem',borderBottom:'6px solid blue',background:'#E5F5FB'}}>
-  <Card.Body>
-    <Card.Title><h2>New Deaths</h2></Card.Title>
-   
-    <Card.Text>
-    <h1>{summary.NewDeaths}</h1>
-                  
-    </Card.Text>
-  
-  </Card.Body>
-</Card>
-
-<Card style={{ width: '18rem',borderBottom:'6px solid crimson',background:'#E5F5FB'}}>
-  <Card.Body>
-    <Card.Title><h2>Total Deaths</h2></Card.Title>
-   
-    <Card.Text>
-    <h1>{summary.TotalDeaths}</h1>
-                   
-    </Card.Text>
-  
-  </Card.Body>
-</Card>
-
-<Card style={{ width: '18rem',borderBottom:'6px solid fuchsia',background:'#E5F5FB'}}>
-  <Card.Body>
-    <Card.Title><h2>Total Recovered</h2></Card.Title>
-   
-    <Card.Text>
-    <h1>{summary.TotalRecovered}</h1>
-    
-    </Card.Text>
-  
-  </Card.Body>
-</Card>
-
-
-     
-</CardDeck>
+      <div>
+                    <Alert className="align" style={{color:'red',fontSize:'30px'}}>
+                      
+                    Last Updated : <br/>{new Date(summary.Date).toDateString()}
+                    </Alert>
+                </div>
+        
               
     
-             
-    
-                
-
+        
+                <div>
+                    <Alert variant="info" className="align">
+                        <h3> New Confirmed:</h3>
+                        <h3>{summary.NewConfirmed}</h3>
+                    </Alert>
                 </div>
+           
+                <div>
+                    <Alert variant="secondary" className="align">
+                        <h3> Total Confirmed:</h3>
+                        <h3>{summary.TotalConfirmed}</h3>
+                    </Alert>
+                </div>
+         <div>
+                    <Alert variant="success" className="align">
+                        <h3> Total Recovered:</h3>
+                        <h3>{summary.TotalRecovered}</h3>
+                    </Alert>
+                </div>
+               
+            
+                <div>
+                    <Alert variant="danger" className="align">
+                        <h3> Total Deaths:</h3>
+                        <h3>{summary.TotalDeaths}</h3>
+                    </Alert>
+                </div>
+           
+              
+      
                     
                     
                </>

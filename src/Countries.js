@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Form,Table} from 'react-bootstrap';
+import {Form,Table,Alert} from 'react-bootstrap';
 
 export default class Countries extends Component {
     state={
@@ -12,12 +12,15 @@ export default class Countries extends Component {
         const {countries}=this.props;
 
        
-        console.log(countries);
+      
         return (
             <>
-            <Form.Control type="text" style={{background:'#D5D5D2'}} placeholder="Search By Country Name........" onChange={this.onchange} />
             <br/><br/>
-            <Table striped bordered hover variant="dark"  responsive >
+            <h1 style={{color:'grey'}}>LATEST STATISTICS OF COVID-19 PANDEMIC</h1>
+        
+            <Form.Control type="text" style={{background:'#D5D5D2'}} placeholder="Search By Country Name........" onChange={this.onchange} />
+            <br/>
+            <Table striped bordered hover variant="light"  responsive >
 
 <thead>
     <tr>
@@ -45,7 +48,7 @@ export default class Countries extends Component {
                 <td>{country.NewConfirmed}</td>
                 <td>{country.TotalConfirmed}</td>
                 <td>{country.TotalRecovered}</td>
-                <td>{country.TotalDeaths}</td>
+                <td style ={{backgroundColor : "#f8d7da"}}>{country.TotalDeaths}</td>
             </tr>
 
 })}

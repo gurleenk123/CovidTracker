@@ -1,78 +1,10 @@
 .App {
   text-align: center;
+
+  background-color:#343434;
  
 }
 .img{
   width:67px
 }
 
-body{
- background:lightblue;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-.row{
-  display:flex;
-  width: 80%;
-  margin:0 auto;
-  background:#fff;
-
-  column-gap: 2px;
-}
-.NewConfirmed,
-.TotalConfirmed,
-.NewDeaths,
-.TotalDeaths,
-.TotalRecovered{
-  padding:20px;
-  text-align:center;
-  margin:0 auto;
- 
-  
-}
-.NewConfirmed{
-  border: 5px solid yellowgreen;
-
-}
-.TotalConfirmed{
-  border:5px solid red
-}
-.NewDeaths{
-  border:5px solid orangered
-}
-
-.TotalDeaths{
-  border:5px solid orchid;
-}
-
-.TotalRecovered{
-  border:5px solid yellow;
-}
-.mytable{
-  border-collapse: separate;
-  width:120px;
-  margin:0 auto;
-  border-spacing: 0 12px;
-
-}
-
-.mytable thead tr th{
-padding:12px;
-text-align:left;
-font-size:23px;
-
-  
-}
-.mytable thead tr {
- 
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.mytable tbody tr {
-
-  font-size:19px;
-  font-family:cursive
-}
-.mytable tbody tr td{
-  padding:12px;
-  text-align:left;
-}
