@@ -4,7 +4,7 @@ import { Alert } from 'react-bootstrap';
  export default class Summary extends Component {
    
     render() {
-        const {summary,currentDate}=this.props;
+        const {summary}=this.props;
 
         return (
           <>
